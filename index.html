@@ -1,90 +1,483 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progate</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>家庭学習のオンラインコーチ</title>
+
+<style>
+
+body{
+margin:0;
+font-family:"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+background:#f4f6fb;
+color:#333;
+line-height:1.8;
+}
+
+.hero{
+height:520px;
+background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+url("hero.jpg");
+background-size:cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.cta-btn{
+display:inline-block;
+margin-top:30px;
+background:#00c300;
+color:white;
+padding:16px 36px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
+max-width:1100px;
+margin:auto;
+padding:80px 20px;
+}
+
+h2{
+text-align:center;
+font-size:32px;
+margin-bottom:50px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.profile{
+display:grid;
+grid-template-columns:280px 1fr;
+gap:40px;
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.profile img{
+width:100%;
+border-radius:10px;
+}
+
+.flow{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+text-align:center;
+}
+
+.flow-step{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.line-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#00c300;
+color:white;
+padding:16px 28px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+}
+
+footer{
+background:#333;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+@media(max-width:768px){
+
+.profile{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <div class="header-left">
-        <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
-      </div>
-      <span class="fa fa-bars menu-icon"></span>
-      <div class="header-right">
-        <a href="#">レッスン</a>
-        <a href="#">新規登録</a>
-        <a href="#" class="login">ログイン</a>
-      </div>
-    </div>
-  </header>
-  <div class="top-wrapper">
-    <div class="container">
-      <h1>LEARN TO CODE.<br>LEARN TO BE CREATIVE.</h1>
-      <p>Progateはオンラインプログラミング学習サービスです。<br>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
-      <div class="btn-wrapper">
-        <a href="#" class="btn signup">新規登録はこちら</a>
-        <p>or</p>
-        <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
-        <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
-      </div>
-    </div>
-  </div>
-  <div class="lesson-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>Learn Where to Get Started!</h2>
-      </div>
-      <div class="lessons">
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/html.png">
-            <p>HTML & CSS</p>
-          </div>
-          <p class="text-contents">ウェブページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-            <p>jQuery</p>
-          </div>
-          <p class="text-contents">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/ruby.png">
-            <p>Ruby</p>
-          </div>
-          <p class="text-contents">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/php.png">
-            <p>PHP</p>
-          </div>
-          <p class="text-contents">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
-        </div>
-      </div>
-      <div class="clear"></div>
-    </div>
-  </div>
-  <div class="message-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
-        <h3>Let's learn to code, learn to be creative!</h3>
-      </div>
-      <span class="btn message">さっそく開発する</span>
-    </div>
-  </div>
-  <footer>
-    <div class="container">
-      <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-      <p>Learn to Code, Learn to be Creative.</p>
-    </div>
-  </footer>
+
+<div class="hero">
+
+<div>
+
+<h1>家庭学習のオンラインコーチ</h1>
+
+<p>
+海外からでも受講可能<br>
+家庭学習をマンツーマンでサポート
+</p>
+
+<a class="cta-btn" href="https://lin.ee/ykF5v70h">
+LINEで無料相談
+</a>
+
+</div>
+
+</div>
+
+<section>
+
+<h2>合格実績</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<strong>高校</strong><br><br>
+
+早稲田シンガポール校<br>
+桜美林高校<br>
+武庫川高校<br>
+ICU高校<br>
+同志社国際高校<br>
+宝仙学園高校
+
+</div>
+
+<div class="card">
+
+<strong>中学校</strong><br><br>
+
+関東学院中学<br>
+昭和学院中学校<br>
+京華中学校<br>
+佼成学園女子中学
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>この塾が選ばれる理由</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>LINE問題解説サービス</h3>
+
+授業外でもLINEで問題を送れば
+解説を作成して返信します。
+
+最短5分以内で回答します。
+
+「分からないからやらない」
+という負の連鎖を防ぎます。
+
+</div>
+
+<div class="card">
+
+<h3>オンライン自習室</h3>
+
+週2回オンライン自習室を開校。
+
+自由に参加して
+学習習慣を作ります。
+
+</div>
+
+<div class="card">
+
+<h3>超密着型オンライン指導</h3>
+
+塾長＋講師＋保護者の
+グループLINEで
+
+常に学習状況を共有します。
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>私たちの教育理念</h2>
+
+<div class="card">
+
+<p style="font-size:24px;text-align:center;font-weight:bold">
+
+私たちの塾は
+勉強が得意な生徒のための塾ではありません。
+
+</p>
+
+<p>
+
+頑張りたいすべての生徒に全力で向き合います。
+
+</p>
+
+<p>
+
+大切にしているのは
+
+</p>
+
+<p style="font-size:20px;font-weight:bold;text-align:center">
+
+「教えること」ではなく
+「できるようになること」
+
+</p>
+
+<p>
+
+分かって楽しい
+できて嬉しい
+
+</p>
+
+<p>
+
+学び本来の面白さを
+子どもたちに届けていきます。
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>教室長紹介</h2>
+
+<div class="profile">
+
+<img src="teacher.jpg">
+
+<div>
+
+<h3>嶋野 朴朗（しまの なお）</h3>
+
+<p>
+
+1994年4月12日生まれ
+静岡県浜松市出身
+
+</p>
+
+<p>
+
+得意科目：数学・理科・体育
+
+</p>
+
+<p>
+
+好きなもの：
+動物（特にサル）、植物、ラーメン、コーラ
+
+</p>
+
+<p>
+
+苦手なもの：バナナ
+
+</p>
+
+<p>
+
+システムエンジニア3年
+不動産営業1年を経験し教育業界へ。
+
+</p>
+
+<p>
+
+現在はタイ（バンコク）で
+学習塾と日本語学校を運営しています。
+
+</p>
+
+<p>
+
+勉強が嫌いな生徒と
+たくさん向き合ってきました。
+
+</p>
+
+<p>
+
+私自身も勉強が好きではなかったからこそ
+子どもたちの気持ちに寄り添えると思っています。
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>オンライン授業に不安な方へ</h2>
+
+<div class="card">
+
+<p>
+
+最初は不安でも
+すぐ慣れる生徒がほとんどです。
+
+</p>
+
+<p>
+
+当塾のオンラインは
+
+</p>
+
+<p style="font-weight:bold">
+
+塾長＋講師＋保護者（＋生徒）
+
+</p>
+
+<p>
+
+のグループLINEで
+常に状況を共有します。
+
+</p>
+
+<p>
+
+ビデオONの対話型授業なので
+集中力も維持できます。
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>対象学年</h2>
+
+<div class="card">
+
+小1～高3
+
+</div>
+
+</section>
+
+<section>
+
+<h2>料金</h2>
+
+<div class="grid">
+
+<div class="card">
+小学生コース<br><br>
+4000B
+</div>
+
+<div class="card">
+中1・中2<br><br>
+4200B
+</div>
+
+<div class="card">
+中3以上<br><br>
+4500B
+</div>
+
+<div class="card">
+プログラミング初級<br>
+Scratch<br><br>
+2900B
+</div>
+
+<div class="card">
+プログラミング中級<br>
+コーディング<br><br>
+3600B
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>入塾までの流れ</h2>
+
+<div class="flow">
+
+<div class="flow-step">
+① LINE相談
+</div>
+
+<div class="flow-step">
+② 無料体験
+</div>
+
+<div class="flow-step">
+③ 入塾
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 家庭学習のオンラインコーチ
+
+</footer>
+
+<a class="line-btn" href="https://lin.ee/ykF5v70h">
+
+LINE相談
+
+</a>
+
 </body>
 </html>
